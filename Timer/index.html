@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style1.css">
   <title>Timer App</title>
 </head>
 
@@ -32,24 +33,29 @@
 
   <div id="editTimerContainer" style="display: none">
     <h2>Edit Timer</h2>
-    <form onsubmit="saveEditedTimer(event)">
-      <label for="editLabelInput">Label:</label>
-      <input type="text" id="editLabelInput" required />
-      <br />
-      <label for="editHoursInput">Hours:</label>
-      <input type="number" id="editHoursInput" />
-      <br />
-      <label for="editMinutesInput">Minutes:</label>
-      <input type="number" id="editMinutesInput" />
-      <br />
-      <label for="editSecondsInput">Seconds:</label>
-      <input type="number" id="editSecondsInput" />
-      <br />
-      <button type="submit">Save</button>
-    </form>
-  </div>
+    <div class="form-container" class="form" autocomplete="off">
+      <form onsubmit="saveEditedTimer(event)">
+        <div class="form-group">
+          <label for="editLabelInput">Label:</label>
+          <input type="text" id="editLabelInput" required />
+        </div>
+        <div class="form-group">
+          <label for="editHoursInput">Hours:</label>
+          <input type="number" id="editHoursInput" />
+        </div>
+        <div class="form-group">
+          <label for="editMinutesInput">Minutes:</label>
+          <input type="number" id="editMinutesInput" />
+        </div>
+        <div class="form-group">
+          <label for="editSecondsInput">Seconds:</label>
+          <input type="number" id="editSecondsInput" />
+        </div>
+        <input class="form-submit-btn" type="submit">Save</button>
+      </form>
+    </div>
 
-  <script src="./script.js"></script>
+    <script src="./script.js"></script>
 
 </body>
 

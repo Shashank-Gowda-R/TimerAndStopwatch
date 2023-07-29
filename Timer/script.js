@@ -85,7 +85,7 @@ function displayTimers() {
 
   var timers = JSON.parse(localStorage.getItem("timers")) || [];
   timers.forEach(function (timer, index) {
-    var listItem = document.createElement("li");
+    var listItem = document.createElement("div");
     var label = timer.label || "Timer " + (index + 1);
     var duration = timer.duration || 0;
 
